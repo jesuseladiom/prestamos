@@ -5,22 +5,21 @@ boton.addEventListener('click', calcula);
 
 function calcula() {
     let imp = parseFloat(document.getElementById('impte').value);
+    let porc = parseFloat(document.getElementById('porcentaje').value);
 
-    let s4= redondea_5(Math.round((imp+(imp*0.12*1))/4))
-    let s6= redondea_5(Math.round((imp+(imp*0.12*2))/6))
-    let s8= redondea_5(Math.round((imp+(imp*0.12*2))/8))
-    let s10= redondea_5(Math.round((imp+(imp*0.12*3))/10))
-    let s12= redondea_5(Math.round((imp+(imp*0.12*3))/12))
-    let s14= redondea_5(Math.round((imp+(imp*0.12*4))/14))
-    let s16= redondea_5(Math.round((imp+(imp*0.12*4))/16))
+    let q4= redondea_5(Math.round((imp+(imp*porc/100*2))/4))
+    let q6= redondea_5(Math.round((imp+(imp*porc/100*3))/6))
+    let q8= redondea_5(Math.round((imp+(imp*porc/100*4))/8))
+    let q10= redondea_5(Math.round((imp+(imp*porc/100*5))/10))
+    let q12= redondea_5(Math.round((imp+(imp*porc/100*6))/12))
+    let q14= redondea_5(Math.round((imp+(imp*porc/100*7))/14))
 
-    resp.innerHTML=`<p>El pago semanal a 4 semanas es  ${s4}, total a pagar es: ${s4*4}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 6 semanas es  ${s6}, total a pagar es: ${s6*6}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 8 semanas es  ${s8}, total a pagar es: ${s8*8}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 10 semanas es  ${s10}, total a pagar es: ${s10*10}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 12 semanas es  ${s12}, total a pagar es: ${s12*12}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 14 semanas es  ${s14}, total a pagar es: ${s14*14}</p>`;
-    resp.innerHTML+=`<p>El pago semanal a 16 semanas es  ${s16}, total a pagar es: ${s16*16}</p>`;
+    resp.innerHTML=`<p>El pago Quincenal a 4 quincenas es  ${q4}, total a pagar es: ${q4*4}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 6 quincenas es  ${q6}, total a pagar es: ${q6*6}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 8 quincenas es  ${q8}, total a pagar es: ${q8*8}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 10 quincenas es  ${q10}, total a pagar es: ${q10*10}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 12 quincenas es  ${q12}, total a pagar es: ${q12*12}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 14 quincenas es  ${q14}, total a pagar es: ${q14*14}</p>`;
 
 }
 
