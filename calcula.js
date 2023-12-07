@@ -22,6 +22,7 @@ function calcula_quincenal() {
     let q10= redondea_5(Math.round((imp+(imp*porc/100*5))/10))
     let q12= redondea_5(Math.round((imp+(imp*porc/100*6))/12))
     let q14= redondea_5(Math.round((imp+(imp*porc/100*7))/14))
+    let q16= redondea_5(Math.round((imp+(imp*porc/100*8))/16))
 
     resp.innerHTML=`<p>El pago Quincenal a 4 quincenas es  ${q4}, total a pagar es: ${q4*4}</p>`;
     resp.innerHTML+=`<p>El pago Quincenal a 6 quincenas es  ${q6}, total a pagar es: ${q6*6}</p>`;
@@ -29,6 +30,7 @@ function calcula_quincenal() {
     resp.innerHTML+=`<p>El pago Quincenal a 10 quincenas es  ${q10}, total a pagar es: ${q10*10}</p>`;
     resp.innerHTML+=`<p>El pago Quincenal a 12 quincenas es  ${q12}, total a pagar es: ${q12*12}</p>`;
     resp.innerHTML+=`<p>El pago Quincenal a 14 quincenas es  ${q14}, total a pagar es: ${q14*14}</p>`;
+    resp.innerHTML+=`<p>El pago Quincenal a 16 quincenas es  ${q16}, total a pagar es: ${q16*16}</p>`;
 }
 
 function calcula_semanal() {
